@@ -4,6 +4,7 @@ const pizzaController = {
     // get all pizzas
     getAllPizza(req, res) {
         Pizza.find({})
+        //include data from other models
             .populate({
                 path: 'comments',
                 select: '-__v'
